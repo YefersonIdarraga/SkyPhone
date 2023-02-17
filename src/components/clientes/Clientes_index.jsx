@@ -6,7 +6,7 @@ const Clientes_index = () => {
   return (
     <section className='container'>
       <Header />
-
+      <p>hola</p>
     </section>
   )
 }
