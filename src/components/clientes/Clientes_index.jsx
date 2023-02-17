@@ -7,6 +7,7 @@ const Clientes_index = () => {
     <section className='container'>
       <Header />
       <p>hola</p>
+      <p>prueba</p>
     </section>
   )
 }
