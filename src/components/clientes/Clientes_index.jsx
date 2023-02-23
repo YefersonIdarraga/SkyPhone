@@ -7,7 +7,17 @@ import withReactContent from "sweetalert2-react-content";
 import "./clientess.css"
 import Header from "../../helper/Header";
 import icon_cliente from "../../assets/icon_cliente.png"
-import Tabla from "./Tabla";
+
+
+/*funcion esconder o hacer aparecer tablas ↓   ↓   ↓*/
+let boton_tab = document.getElementById('boton_tab');
+let tabla = document.getElementById('tabla');
+
+boton_tab.addEventListener("click", interruptor);
+function interruptor() {
+  tabla.classList.toggle('show');
+}/*funcion esconder o hacer aparecer tablas ↑   ↑    ↑*/
+
 
 const MySwal = withReactContent(Swal);
 
@@ -57,9 +67,14 @@ const Clientes_index = () => {
     <section>
       <Header />
       <div className="divFondo "></div>
+
+      <section className="boton_cont " id="boton_tab"> {/*boton*/}
+        <button className="add_tabla"> Cambiar de vista</button>
+      </section>{/*boton*/}
+
       <section className="celulares-container md:mx-0 mx-10">
         {/* Datos de la tabla */}
-        <section className="listado-celulares ">
+        <section className="listado-celulares show" id="tabla">
           {clientes.map((cliente) => (
             <div key={cliente.id} className="cel-card">
               <div className="cel-subcont">
@@ -133,8 +148,8 @@ const Clientes_index = () => {
       </Link>
 
 
-
-      <section className="tabla">
+      {/* tabla ↓         ↓          ↓ */}
+      <section className="tabla" id="tabla">
         <table className="prueba">
           <thead>
             <tr className="text-xl ">
@@ -168,7 +183,8 @@ const Clientes_index = () => {
             </tbody>
         </table>
       </section>
-      <Tabla></Tabla>
+      {/* tabla  ↑     ↑      ↑     ↑      ↑ */}
+      
     </section>
   );
 };
