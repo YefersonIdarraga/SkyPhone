@@ -52,6 +52,101 @@
 }
 
 
+/* Comienzo de la Tabla   Tabla  ↓  ↓  ↓  ↓ */
+.tabla {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.462);
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+}
+
+table tr {
+  background-image: linear-gradient( to bottom, #00034128, #0114582d, #0524712d, #06328a2b, #0042a523 );
+  border: 1px solid #2c4bbd;
+  color: white;
+}
+
+table th,
+td {
+  font-size: 16px;
+  padding: 8px;
+  text-align: center;
+}
+
+table thead th {
+  text-transform: uppercase;
+  box-shadow: 0px 0px 10px rgba(46, 141, 250, 0.649);
+  color: #9d48ff !important;
+  text-shadow: 0px 0px 10px rgb(149, 55, 255);
+}
+
+table thead th:hover {
+  box-shadow: 0px 0px 10px rgb(149, 55, 255);
+  
+}
+
+table tbody tr:hover {
+  background-color: rgba(46, 141, 250, 0.22);
+}
+
+table tbody td:hover {
+  background-color: rgba(46, 141, 250, 0.318);
+  box-shadow: 0px 0px 10px rgba(46, 141, 250, 0.511);
+}
+
+.acciones {
+  display: flex;
+  gap: 50px;
+  justify-content: center; 
+}
+
+@media screen and (max-width: 800px) {
+  table {
+    border: 0px;
+  }
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    margin-bottom: 8px;
+    border-bottom: 4px solid #057c38;
+    display: block;
+  }
+
+  table th,
+  td {
+    font-size: 12px;
+  }
+
+  table td {
+    background-color: #053f2c;
+    display: block;
+    border-bottom: 1px solid #06a416;
+    text-align: center;
+  }
+  table td:last-child {
+    border-bottom: 0px;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    float: left;
+    color: #dedede;
+  }
+}
+
+/* Fin de la tabla  ↑   tabla     ↑      ↑      ↑    ↑*/
 
 
 
