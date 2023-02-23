@@ -99,11 +99,11 @@ const Clientes_index = () => {
                       </div>
                         
 
-                      <div className="acciones_clie">
+                      <div className="acciones_clie" onClick={() => confirEliminar(cliente.id)}>
                         <div class="checkoutButton ojo"> {/* ↓ acciones ↓ */}
                           <div class="priceTag">
                             <span>
-                              <button onClick={() => confirEliminar(cliente.id)}>
+                              <button >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
                             </span>
@@ -112,16 +112,16 @@ const Clientes_index = () => {
                         </div> {/* ↑ acciones ↑ */}
                       
                         
-                          <div class="checkoutButton ojo"> {/* ↓ acciones ↓ */}
-                            <div>
-                              <Link
-                                to={`/edit-client/${cliente.id}`}
-                                className="fa-solid fa-pen-to-square "
-                              ></Link>
-                            </div>
-                            <h2>Editar</h2>
-                          </div> {/* ↑ acciones ↑ */}
+                            <Link to={`/edit-client/${cliente.id}`}>
+                              <div class="checkoutButton ojo"> {/* ↓ acciones ↓ */}
+                              <div className="fa-solid fa-pen-to-square ">
+                              </div>
+                                  <h2>Editar</h2>
+                              </div> {/* ↑ acciones ↑ */}
+                            </Link>
+                              
                       </div>
+                         
                       
                         
                      
