@@ -9,14 +9,6 @@ import Header from "../../helper/Header";
 import icon_cliente from "../../assets/icon_cliente.png"
 
 
-/*funcion esconder o hacer aparecer tablas ↓   ↓   ↓*/
-let boton_tab = document.getElementById('boton_tab');
-let tabla = document.getElementById('tabla');
-
-boton_tab.addEventListener("click", interruptor);
-function interruptor() {
-  tabla.classList.toggle('show');
-}/*funcion esconder o hacer aparecer tablas ↑   ↑    ↑*/
 
 
 const MySwal = withReactContent(Swal);
@@ -68,13 +60,13 @@ const Clientes_index = () => {
       <Header />
       <div className="divFondo "></div>
 
-      <section className="boton_cont " id="boton_tab"> {/*boton*/}
+      <section className="boton_cont" > {/*boton - -  -boton - - - */}
         <button className="add_tabla"> Cambiar de vista</button>
-      </section>{/*boton*/}
+      </section>{/*boton - - - -boton - - -- - -*/}
 
       <section className="celulares-container md:mx-0 mx-10">
         {/* Datos de la tabla */}
-        <section className="listado-celulares show" id="tabla">
+        <section className="listado-celulares">
           {clientes.map((cliente) => (
             <div key={cliente.id} className="cel-card">
               <div className="cel-subcont">
@@ -149,7 +141,7 @@ const Clientes_index = () => {
 
 
       {/* tabla ↓         ↓          ↓ */}
-      <section className="tabla" id="tabla">
+      <section className="tabla">
         <table className="prueba">
           <thead>
             <tr className="text-xl ">
