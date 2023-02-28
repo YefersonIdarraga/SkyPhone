@@ -52,6 +52,170 @@
 }
 
 
+/* Comienzo de la Tabla   Tabla  ↓  ↓  ↓  ↓ */
+.show {
+  display: none;
+}
+
+.esconder {
+  display: none;
+}
+
+.tabla {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  
+}
+
+table {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.462);
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  table-layout: fixed;
+}
+
+table tr {
+  background-image: linear-gradient( to bottom, #00034128, #0114582d, #0524712d, #06328a2b, #0042a523 );
+  border: 1px solid #2c4bbd;
+  color: white;
+}
+
+table th,
+td {
+  font-size: 16px;
+  padding: 8px;
+  text-align: center;
+}
+
+table thead th {
+  text-transform: uppercase;
+  box-shadow: 0px 0px 10px rgba(46, 141, 250, 0.649);
+  color: #9d48ff !important;
+  text-shadow: 0px 0px 10px rgb(149, 55, 255);
+}
+
+table thead th:hover {
+  box-shadow: 0px 0px 10px rgb(149, 55, 255);
+  
+}
+
+table tbody tr:hover {
+  background-color: rgba(46, 141, 250, 0.22);
+}
+
+table tbody td:hover {
+  background-color: rgba(46, 141, 250, 0.318);
+  box-shadow: 0px 0px 10px rgba(46, 141, 250, 0.511);
+}
+
+.acciones {
+  display: flex;
+  gap: 50px;
+  justify-content: center; 
+}
+
+@media screen and (max-width: 800px) {
+  table {
+    border: 0px;
+  }
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    margin-bottom: 8px;
+    border-bottom: 4px solid #057c38;
+    display: block;
+  }
+
+  table th,
+  td {
+    font-size: 12px;
+  }
+
+  table td {
+    background-color: #053f2c;
+    display: block;
+    border-bottom: 1px solid #06a416;
+    text-align: center;
+  }
+  table td:last-child {
+    border-bottom: 0px;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    float: left;
+    color: #dedede;
+  }
+}
+
+/* Fin de la tabla  ↑   tabla     ↑      ↑      ↑    ↑*/
+
+
+/*boton*/
+
+
+
+.boton_cont {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.add_tabla {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+ }
+ 
+ .add_tabla::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+ }
+ 
+ .add_tabla:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 2em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+ }
+ 
+ .add_tabla:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+         0 0 2.5em 2em var(--glow-spread-color),
+         inset 0 0 .5em .25em var(--glow-color);
+ }
 
 
 

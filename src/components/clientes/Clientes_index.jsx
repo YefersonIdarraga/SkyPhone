@@ -7,6 +7,7 @@ import withReactContent from "sweetalert2-react-content";
 import "./clientess.css";
 import Header from "../../helper/Header";
 import icon_cliente from "../../assets/icon_cliente.png";
+import icon_cliente from "../../assets/icon_cliente.png";
 
 const MySwal = withReactContent(Swal);
 
@@ -58,7 +59,7 @@ const Clientes_index = () => {
       <div className="divFondo md:h-[140%] h-[130%]"></div>
       <section className="celulares-container md:mx-0 mx-10">
         {/* Datos de la tabla */}
-        <section className="listado-celulares ">
+        <section className="listado-celulares">
           {clientes.map((cliente) => (
             <div key={cliente.id} className="cel-card">
               <div className="cel-subcont">
@@ -135,6 +136,44 @@ const Clientes_index = () => {
         <i class="fa-solid fa-plus"></i>
         <h1>Agregar nuevo cliente</h1>
       </Link>
+
+      {/* tabla ↓         ↓          ↓ */}
+      <section className="tabla">
+        <table className="prueba">
+          <thead>
+            <tr className="text-xl ">
+              <th>Cliente</th>
+              <th>Dirreccion</th>
+              <th>Telefono</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {clientes.map((cliente) => (
+              <tr>
+                <td data-label="Nombre:">
+                  {cliente.primer_nombre} {cliente.segundo_nombre}{" "}
+                  {cliente.primer_apellido} {cliente.segundo_apellido}
+                </td>
+                <td data-label="Descripcion:">{cliente.direccion}</td>
+                <td data-label="Valor:">{cliente.telefono}</td>
+
+                <td className="acciones">
+                  <button onClick={() => confirEliminar(cliente.id)}>
+                    <i className="fa-solid fa-trash"></i>
+                  </button>
+
+                  <Link
+                    to={`/edit-client/${cliente.id}`}
+                    className="fa-solid fa-pen-to-square "
+                  ></Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+      {/* tabla  ↑     ↑      ↑     ↑      ↑ */}
     </section>
   );
 };
