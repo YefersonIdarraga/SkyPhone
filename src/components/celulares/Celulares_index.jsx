@@ -51,14 +51,14 @@ const Celulares_index = () => {
   }, []);
 
   return (
-    <section className="contenedor-principal">
+    <section className=" contenedor-principal">
       <Header />
-      <div className="divFondo "></div>
+      <div className="divFondo md:h-[140%] h-[130%]"></div>
       <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] p-5 mt-10 text-center text-stone-300 uppercase -mb-20">
         Celulares disponibles
       </h1>
 
-      <section className="celulares-container md:mx-0 mx-10 ">
+      <section className=" container mx-auto md:ml-60 -ml-10 celulares-container">
         {/* Datos de la tabla */}
         <section className="listado-celulares ">
           {celulares.map((celular) => (
@@ -130,7 +130,9 @@ const Celulares_index = () => {
 
                   <div className="productSpecifications">
                     <h1 className="TitleCard">Caracteristicas</h1>
-                    <p className="scroll-caracteristicas">{celular.caracteristicas}</p>
+                    <p className="scroll-caracteristicas">
+                      {celular.caracteristicas}
+                    </p>
 
                     <div className="checkoutButton">
                       <div className="priceTag">
@@ -172,7 +174,7 @@ const Celulares_index = () => {
         </section>
       </section>
       <Link to="/add-cel " className="add-cel ml-40 bg-red-600">
-        <i class="fa-solid fa-plus"></i> <h1>Agregar nuevo celular</h1>
+        <i className="fa-solid fa-plus"></i> <h1>Agregar nuevo celular</h1>
       </Link>
     </section>
   );
