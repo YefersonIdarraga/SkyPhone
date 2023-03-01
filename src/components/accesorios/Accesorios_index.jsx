@@ -178,7 +178,7 @@ const Accesorios_index = () => {
                       <div>
                         <Link
                           to={`/edit-acc/${accesorios.id}`}
-                          classNameName="fa-solid fa-pen-to-square"
+                          className="fa-solid fa-pen-to-square"
                         ></Link>
                       </div>
                       <button className="preorder">

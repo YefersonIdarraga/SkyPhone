@@ -23,7 +23,7 @@ const Header = () => {
     <section className="container-header">
       <div className="logo mt-5 -ml-[10%]">
         <Link to="/">
-          <img className="-ml-[150%] " src={logo} alt="" />
+          <img className="xl:-ml-[150%] -ml-[80%] " src={logo} alt="" />
         </Link>
       </div>
       <section>

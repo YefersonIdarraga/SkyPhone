@@ -72,8 +72,11 @@ const FormLogin = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-            <i id="checkUser" class="fa-solid fa-check"></i>
-            <i id="exclamationUser" class="fa-solid fa-circle-exclamation"></i>
+            <i id="checkUser" className="fa-solid fa-check"></i>
+            <i
+              id="exclamationUser"
+              className="fa-solid fa-circle-exclamation"
+            ></i>
             <div id="user-alert" className="login-alert">
               <p>
                 Solo se permiten letras, números, guón y guión bajo, minimo 3
@@ -90,8 +93,11 @@ const FormLogin = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <i id="checkPass" class="fa-solid fa-check"></i>
-            <i id="exclamationPass" class="fa-solid fa-circle-exclamation"></i>
+            <i id="checkPass" className="fa-solid fa-check"></i>
+            <i
+              id="exclamationPass"
+              className="fa-solid fa-circle-exclamation"
+            ></i>
             <div id="pass-alert" className="login-alert">
               <p>
                 Debe contener mínimo 8 caracteres, una letra minuscula, una
@@ -102,7 +108,7 @@ const FormLogin = () => {
           <p id="adv-log" className="text-red-600">
             Rellene los campos correctamente.
           </p>
-          <div class="form-section">
+          <div className="form-section">
             <p className="Nocuenta ">
               No tienes una cuenta?{" "}
               <a className="TextLog uppercase" href="">

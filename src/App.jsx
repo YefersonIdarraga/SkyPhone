@@ -14,6 +14,8 @@ import EditarClient from "./components/clientes/EditarClient";
 import EditarAcc from "./components/accesorios/EditarAcc";
 import AgregarClient from "./components/clientes/AgregarClient";
 
+import Footer from "./helper/Footer";
+
 ///Creacion de rutas
 
 const router = createBrowserRouter([
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
     element: <Login_index />,
     errorElement: <Error404 />,
   },
-  // ↓ celulares  ↓    ↓ 
+  // ↓ celulares  ↓    ↓
   {
     path: "/celulares",
     element: <Celulares_index />,
@@ -44,7 +46,7 @@ const router = createBrowserRouter([
     errorElement: <Error404 />,
   },
   // ↑ celulares   ↑     ↑
-  // ↓ clientes↓  ↓    ↓ 
+  // ↓ clientes↓  ↓    ↓
   {
     path: "/clientes",
     element: <Clientes_index />,
@@ -61,7 +63,7 @@ const router = createBrowserRouter([
     errorElement: <Error404 />,
   },
   // ↑ clientes↑   ↑     ↑
-  // ↓ accesorios  ↓    ↓ 
+  // ↓ accesorios  ↓    ↓
   {
     path: "/accesorios",
     element: <Accesorios_index />,
@@ -69,7 +71,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/add-acc",
-    element: <AgregarAcc/>,
+    element: <AgregarAcc />,
     errorElement: <Error404 />,
   },
   {
@@ -77,10 +79,23 @@ const router = createBrowserRouter([
     element: <EditarAcc />,
     errorElement: <Error404 />,
   },
-   // ↑ accesorios   ↑     ↑
-])
+  // ↑ accesorios   ↑     ↑
+]);
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />;
+      <Footer />;
+    </>
+  );
 };
+
+/* function Footer() {
+  return (
+    <>
+     
+    </>
+  );
+} */
 
 export default App;
