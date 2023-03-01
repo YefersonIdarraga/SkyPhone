@@ -4,12 +4,10 @@ import { collection, doc, getDocs, deleteDoc } from "firebase/firestore";
 import { dataBase } from "../../firebase/dataBase";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import "./clientess.css"
+import "./clientess.css";
 import Header from "../../helper/Header";
-import icon_cliente from "../../assets/icon_cliente.png"
-
-
-
+import icon_cliente from "../../assets/icon_cliente.png";
+import icon_cliente from "../../assets/icon_cliente.png";
 
 const MySwal = withReactContent(Swal);
 
@@ -58,12 +56,7 @@ const Clientes_index = () => {
   return (
     <section>
       <Header />
-      <div className="divFondo "></div>
-
-      <section className="boton_cont" > {/*boton - -  -boton - - - */}
-        <button className="add_tabla"> Cambiar de vista</button>
-      </section>{/*boton - - - -boton - - -- - -*/}
-
+      <div className="divFondo md:h-[140%] h-[130%]"></div>
       <section className="celulares-container md:mx-0 mx-10">
         {/* Datos de la tabla */}
         <section className="listado-celulares">
@@ -71,74 +64,78 @@ const Clientes_index = () => {
             <div key={cliente.id} className="cel-card">
               <div className="cel-subcont">
                 {/* OTRA FORMA DE MOSTRAR LAS CARDS */}
-
-                <div class="wrapper targeta_client"> {/*inicio targeta */}
+                <div class="wrapper targeta_client">
+                  {" "}
+                  {/*inicio targeta */}
                   <div class="overviewInfo">
                     <div class="productinfo">
-
                       <img src={icon_cliente} alt="" />
-              
+
                       <div className="targeta_cont">
                         <div className="targeta_cont_items">
                           <div class="grouptext">
                             <h3>Cliente</h3>
-                            <p>{cliente.primer_nombre} {cliente.segundo_nombre}</p>
-                            <p>{cliente.primer_apellido} {cliente.segundo_apellido}</p>
+                            <p>
+                              {cliente.primer_nombre} {cliente.segundo_nombre}
+                            </p>
+                            <p>
+                              {cliente.primer_apellido}{" "}
+                              {cliente.segundo_apellido}
+                            </p>
                           </div>
                           <div class="grouptext">
-                             <h3>Direccion</h3>
-                          <p>{cliente.direccion}</p>
+                            <h3>Direccion</h3>
+                            <p>{cliente.direccion}</p>
                           </div>
                           <div className="grouptext">
                             <h3>Telefono</h3>
-                             <p>{cliente.telefono}</p>
+                            <p>{cliente.telefono}</p>
                           </div>
-                             
                         </div>
-
                       </div>
-                        
 
-                      <div className="acciones_clie" onClick={() => confirEliminar(cliente.id)}>
-                        <div class="checkoutButton ojo"> {/* ↓ acciones ↓ */}
+                      <div className="acciones_clie">
+                        <div class="checkoutButton ojo">
+                          {" "}
+                          {/* ↓ acciones ↓ */}
                           <div class="priceTag">
                             <span>
-                              <button >
+                              <button
+                                onClick={() => confirEliminar(cliente.id)}
+                              >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
                             </span>
                           </div>
                           <h2>Eliminar</h2>
-                        </div> {/* ↑ acciones ↑ */}
-                      
-                        
-                            <Link to={`/edit-client/${cliente.id}`}>
-                              <div class="checkoutButton ojo"> {/* ↓ acciones ↓ */}
-                              <div className="fa-solid fa-pen-to-square ">
-                              </div>
-                                  <h2>Editar</h2>
-                              </div> {/* ↑ acciones ↑ */}
-                            </Link>
-                              
+                        </div>{" "}
+                        {/* ↑ acciones ↑ */}
+                        <div class="checkoutButton ojo">
+                          {" "}
+                          {/* ↓ acciones ↓ */}
+                          <div>
+                            <Link
+                              to={`/edit-client/${cliente.id}`}
+                              className="fa-solid fa-pen-to-square "
+                            ></Link>
+                          </div>
+                          <h2>Editar</h2>
+                        </div>{" "}
+                        {/* ↑ acciones ↑ */}
                       </div>
-                         
-                      
-                        
-                     
-                      
                     </div>
                   </div>
-
-                </div> {/* fin targeta */}
+                </div>{" "}
+                {/* fin targeta */}
               </div>
             </div>
           ))}
         </section>
       </section>
       <Link to="/add-client" className="add-cel ml-40 bg-red-600">
-        <i class="fa-solid fa-plus"></i><h1>Agregar nuevo cliente</h1>
+        <i class="fa-solid fa-plus"></i>
+        <h1>Agregar nuevo cliente</h1>
       </Link>
-
 
       {/* tabla ↓         ↓          ↓ */}
       <section className="tabla">
@@ -154,29 +151,29 @@ const Clientes_index = () => {
           <tbody>
             {clientes.map((cliente) => (
               <tr>
-                <td data-label="Nombre:">{cliente.primer_nombre} {cliente.segundo_nombre} {cliente.primer_apellido} {cliente.segundo_apellido}</td>
+                <td data-label="Nombre:">
+                  {cliente.primer_nombre} {cliente.segundo_nombre}{" "}
+                  {cliente.primer_apellido} {cliente.segundo_apellido}
+                </td>
                 <td data-label="Descripcion:">{cliente.direccion}</td>
                 <td data-label="Valor:">{cliente.telefono}</td>
-               
-              
 
                 <td className="acciones">
-                <button onClick={() => confirEliminar(cliente.id)}>
-                  <i className="fa-solid fa-trash"></i>
-                </button>
+                  <button onClick={() => confirEliminar(cliente.id)}>
+                    <i className="fa-solid fa-trash"></i>
+                  </button>
 
-                <Link
-                  to={`/edit-client/${cliente.id}`}
-                  className="fa-solid fa-pen-to-square ">
-                </Link>
+                  <Link
+                    to={`/edit-client/${cliente.id}`}
+                    className="fa-solid fa-pen-to-square "
+                  ></Link>
                 </td>
               </tr>
             ))}
-            </tbody>
+          </tbody>
         </table>
       </section>
       {/* tabla  ↑     ↑      ↑     ↑      ↑ */}
-      
     </section>
   );
 };

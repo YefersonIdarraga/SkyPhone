@@ -19,6 +19,7 @@
   padding: 40px 60px 40px 60px;
   border-radius: 20px;
   color: white;
+  z-index: 0;
 }
 
 .subtitulo {

@@ -1,47 +1,48 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { dataBase } from "../../firebase/dataBase";
 
-
 const AgregarClient = () => {
+  //  Add cel
+  const [primer_nombre, setPrimer_nombre] = useState("");
+  const [segundo_nombre, setSegundo_nombre] = useState("");
+  const [primer_apellido, setPrimer_apellido] = useState("");
+  const [segundo_apellido, setSegundo_apellido] = useState("");
+  const [direccion, setDireccion] = useState("");
+  const [telefono, setTelefono] = useState("");
 
-   //  Add cel
-   const [primer_nombre, setPrimer_nombre] = useState("");
-   const [segundo_nombre, setSegundo_nombre] = useState("");
-   const [primer_apellido, setPrimer_apellido] = useState("");
-   const [segundo_apellido, setSegundo_apellido] = useState("");
-   const [direccion, setDireccion] = useState("");
-   const [telefono, setTelefono] = useState("");
+  const navigate = useNavigate();
 
-   const navigate = useNavigate();
- 
-   const clientcard = collection(dataBase, "Admin-clientes");
- 
-   const addclient = async (e) => {
-     
-       e.preventDefault();
-       await addDoc(clientcard, {
-         primer_nombre: primer_nombre,
-         segundo_nombre: segundo_nombre,
-         primer_apellido: primer_apellido,
-         segundo_apellido: segundo_apellido,
-         direccion: direccion,
-         telefono: telefono,
-       });
-       navigate("/clientes");
-     }
-   
+  const clientcard = collection(dataBase, "Admin-clientes");
+
+  const addclient = async (e) => {
+    e.preventDefault();
+    await addDoc(clientcard, {
+      primer_nombre: primer_nombre,
+      segundo_nombre: segundo_nombre,
+      primer_apellido: primer_apellido,
+      segundo_apellido: segundo_apellido,
+      direccion: direccion,
+      telefono: telefono,
+    });
+    navigate("/clientes");
+  };
+
   return (
     /*  Estructura de la tabla */
     <section className="contenedor-principal">
-      <div className="divFondo "></div>
+      <div className="divFondo md:h-[140%] h-[130%]"></div>
       <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] m-auto p-5 text-center text-stone-300 uppercase">
         Agregar Clientes
       </h1>
       <section className=" celulares-container md:mx-0 mx-10 ">
         <section className="formCell p-5  ">
-          <form id="form" className="w-full max-w-2xl  m-10 "onSubmit={addclient}>
+          <form
+            id="form"
+            className="w-full max-w-2xl  m-10 "
+            onSubmit={addclient}
+          >
             <div className="contenedorForm ">
               <label className="text-gray-300 block uppercase font-bold mb-2 ">
                 Primer Nombre
@@ -182,7 +183,4 @@ const AgregarClient = () => {
   );
 };
 
-  
-
-
-export default AgregarClient
+export default AgregarClient;

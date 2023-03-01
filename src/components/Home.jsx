@@ -5,22 +5,23 @@ import FormLogin from "./login/FormLogin";
 
 const Home = () => {
   return (
-    <section className="pb-20">
-      <div className="divFondo"></div>
+    <section className="container mx-auto ">
+      <div className="divFondo md:h-[140%] h-[170%]"></div>
       <Header />
-      <div className="main mt-[10%] ml-[4%] mb-5 ">
+
+      <div className="main mt-[8%] ml-[3%] mb-0 ">
         <p className="font-bold p-2 ">
           ✦⭑ El mejor contenido para tu smartphone.
         </p>
       </div>
-      <section className="container h-[90vh] grid grid-cols-1 md:grid-cols-8 -mt-[8%] m-10">
+      <section className="container h-[90vh] grid grid-cols-1 md:grid-cols-8 -mt-[2%] md:m-5">
         <section className="md:col-span-5 flex items-center justify-center ">
           <div className="">
-            <h1 className="text-6xl text-white m-5 mt-[12%]">
+            <h1 className="md:text-6xl text-5xl text-white m-5 md:-mt-[15%] mt-[10%] ">
               Encuentra tu mejor estilo
               <br /> para tu smartphone.
             </h1>
-            <p className="text-gray-400 text-s m-5">
+            <p className="text-gray-400 md:text-s text-ms m-auto p-3">
               Somos una tienda en línea que ofrece una amplia variedad de
               dispositivos móviles de última generación, así como una gran
               selección de accesorios para personalizar y proteger tu
@@ -42,24 +43,24 @@ const Home = () => {
           </div>
         </section>
         <section className="md:col-span-3">
-          <img className="pt-10" src={logo} alt="" />
+          <img className="pt-10 " src={logo} alt="" />
         </section>
-        <div className="-mt-0 ml-[160%] ">
+        <div className="md:-mt-[55%] -mt-[2%] md:ml-[160%] ml-0 xl:w-[150%]">
           <a
             target="_blank"
             href="https://github.com/jaimezzapata/final-metodologias"
           >
-            <button className="BtnImg px-10">Contáctanos</button>
+            <button className="BtnImg p-5  w-full    ">Contáctanos</button>
           </a>
         </div>
         {/* ///FORMULARIO  */}
       </section>
       <div className="container-formSesion">
-      <div className="formDetras ml-[33.4%] mt-[7%]"></div>
-      <div className="formHome -mt-[15%]">
-        {" "}
-        <FormLogin />{" "}
-      </div>
+        <div className="formDetras  md:ml-[28.4%] -ml-[3%] md:mt-[13%] mt-[30%] "></div>
+        <div className="formHome md:-mt-[31%] mt-[80%]">
+          {" "}
+          <FormLogin />{" "}
+        </div>
       </div>
     </section>
   );

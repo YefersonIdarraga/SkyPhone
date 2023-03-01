@@ -171,7 +171,7 @@ const EditarCel = () => {
   return (
     /*  Estructura de la tabla */
     <section>
-      <div className="divFondo "></div>
+      <div className="divFondo md:h-[140%] h-[130%]"></div>
       <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] m-auto p-5 text-center text-stone-300 uppercase">
         Editar consulta de celulares
       </h1>
@@ -188,7 +188,7 @@ const EditarCel = () => {
                 value={marca}
                 onChange={(e) => setMarca(e.target.value)}
                 type="text"
-                className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
+                className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-teal-300  focus:text-blue-700 focus:font-bold"
               />
               <i id="check" className="fa-solid fa-check"></i>
               <i
@@ -210,7 +210,7 @@ const EditarCel = () => {
                 value={referencia}
                 onChange={(e) => setReferencia(e.target.value)}
                 type="text"
-                className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
+                className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-teal-300  focus:text-blue-700 focus:font-bold"
               />
               <i id="checkR" className="fa-solid fa-check"></i>
               <i
@@ -232,7 +232,7 @@ const EditarCel = () => {
                 value={precio}
                 onChange={(e) => setPrecio(e.target.value)}
                 type="number"
-                className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
+                className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none  focus:bg-teal-300  focus:text-blue-700 focus:font-bold"
               />
               <i id="checkP" className="fa-solid fa-check"></i>
               <i
@@ -254,7 +254,7 @@ const EditarCel = () => {
                 value={caracteristicas}
                 onChange={(e) => setCaracteristicas(e.target.value)}
                 type="text"
-                className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
+                className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none  focus:bg-teal-300  focus:text-blue-700 focus:font-bold"
               />
               <i id="checkC" className="fa-solid fa-check"></i>
               <i
@@ -276,7 +276,7 @@ const EditarCel = () => {
                 value={imagen}
                 onChange={(e) => setImagen(e.target.value)}
                 type="text"
-                className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
+                className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none  focus:bg-teal-300  focus:text-blue-700 focus:font-bold"
               />
               <i id="checkI" className="fa-solid fa-check"></i>
               <i

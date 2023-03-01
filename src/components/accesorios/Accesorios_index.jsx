@@ -66,7 +66,7 @@ const Accesorios_index = () => {
 
   return (
     <section className="contenedor-principal">
-      <div className="divFondo "></div>
+      <div className="divFondo md:h-[140%] h-[130%]"></div>
       <Header />
       <section className="accesorios-container">
         <Link to="/add-acc">Agregar Nuevo Accesorio</Link>
@@ -171,7 +171,7 @@ const Accesorios_index = () => {
                       <div className="priceTag">
                         <span>
                           <button onClick={() => confirEliminar(accesorios.id)}>
-                            <i classNameName="fa-solid fa-trash"></i>
+                            <i className="fa-solid fa-trash"></i>
                           </button>
                         </span>
                       </div>

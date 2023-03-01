@@ -55,7 +55,7 @@ const FormLogin = () => {
 
   return (
     <section className="contenedor-principal">
-      <div className="divFondo"></div>
+      <div className="divFondo md:h-[140%] h-[130%]"></div>
 
       <div className="cont-form-login">
         <form id="form-login" action="">
