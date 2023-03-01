@@ -9,7 +9,7 @@ const Home = () => {
       <div className="divFondo md:h-[140%] h-[170%]"></div>
       <Header />
 
-      <div className="main mt-[8%] ml-[3%] mb-0 ">
+      <div className="main mt-[8%] ml-[3%] w-auto md:w-[30%] mb-0 ">
         <p className="font-bold p-2 ">
           ✦⭑ El mejor contenido para tu smartphone.
         </p>
@@ -43,7 +43,7 @@ const Home = () => {
           </div>
         </section>
         <section className="md:col-span-3">
-          <img className="pt-10 " src={logo} alt="" />
+          <img className="pt-5 " src={logo} alt="" />
         </section>
         <div className="md:-mt-[55%] -mt-[2%] md:ml-[160%] ml-0 xl:w-[150%]">
           <a
@@ -56,8 +56,8 @@ const Home = () => {
         {/* ///FORMULARIO  */}
       </section>
       <div className="container-formSesion">
-        <div className="formDetras  md:ml-[28.4%] -ml-[3%] md:mt-[13%] mt-[30%] "></div>
-        <div className="formHome md:-mt-[31%] mt-[80%]">
+        <div className="formDetras  md:ml-[28.4%]  md:mt-[13%]  "></div>
+        <div className="formHome md:-mt-[31%] mt-[150%]">
           {" "}
           <FormLogin />{" "}
         </div>

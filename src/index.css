@@ -131,7 +131,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .main {
-  width: 430px;
   height: 40px;
   text-align: center;
   background-color: #063289;
@@ -185,7 +184,7 @@ body::-webkit-scrollbar-thumb:hover {
 .formDetras {
   background-color: #408cff;
   width: 450px;
-  margin: 100px;
+  margin: 1vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -281,5 +280,92 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 18px;
     display: inline;
     padding: 15px;
+  }
+}
+/* 
+              FOOTER                */
+
+.footer-section {
+  width: 100%;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  background-color: #000341;
+  margin-bottom: -25px;
+}
+
+.footer-section h2 {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.footer-section h2::after {
+  content: "";
+  width: 4rem;
+  height: 0.2rem;
+  background: #00dbe6;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+}
+
+.footer-section p {
+  transition: all 0.2s linear;
+  margin-bottom: 0.6em;
+}
+
+img {
+  text-decoration: none;
+  cursor: pointer;
+  transform: translateX(4px);
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s linear;
+}
+
+.pMove:hover {
+  transition: all 0.2s linear;
+  transform: translateX(4px);
+}
+
+.footer-section a:hover {
+  color: #5bfadf;
+}
+
+.footer-item {
+  margin: 1rem;
+}
+
+.footer-item ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.footer-item li {
+  margin-right: 1rem;
+}
+
+.social ul li {
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.social ul li:hover {
+  color: #19fdb5;
+  transform: scale(1.1);
+  transition: all 0.2s linear;
+}
+
+@media screen and (max-width: 320px) {
+  .footer-section {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 2rem;
   }
 }
