@@ -36,6 +36,7 @@ const AgregarCel = () => {
 
   const vLetras = /^[A-Za-z]{1,20}$/;
   const vLetrasyNum = /^[a-zA-Z0-9]{1,20}$/;
+  const vText = /^[a-zA-ZÁ-ÿ0-9\s:\.\,\-\(\)\+/]{1,200}$/;
   const vNumeros = /[^a-z ]\ *([.0-9])*\d/;
   const vUrl =
     /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
@@ -83,7 +84,7 @@ const AgregarCel = () => {
         }
         break;
       case "caracteristicas":
-        if (vLetrasyNum.test(e.target.value)) {
+        if (vText.test(e.target.value)) {
           checkC.style.opacity = "1";
           exclamationC.style.opacity = "0";
           caracteristicasA.style.opacity = "0";
@@ -133,7 +134,7 @@ const AgregarCel = () => {
     if (
       !vLetras.test(vMarca.value) ||
       !vLetrasyNum.test(vReferencia.value) ||
-      !vLetrasyNum.test(vCaracteristicas.value) ||
+      !vText.test(vCaracteristicas.value) ||
       !vNumeros.test(vPrecio.value) ||
       !vUrl.test(vImagen.value)
     ) {
