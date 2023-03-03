@@ -1,17 +1,3 @@
-/*  import React from 'react'
-import Header from '../../helper/Header'
-import './style.css'
-
-const Accesorios_index = () => {
-  return (
-    <section className='container'>
-      <Header />
-      
-    </section>
-  )
-}
-
-export default Accesorios_index*/
 /* Se importan componentes */
 import React, { useState, useEffect } from "react";
 import "./style.css";
@@ -69,35 +55,14 @@ const Accesorios_index = () => {
       <div className="divFondo md:h-[140%] h-[130%]"></div>
       <Header />
       <section className="accesorios-container">
-        <Link to="/add-acc">Agregar Nuevo Accesorio</Link>
-
         {/* Datos de la tabla */}
         <section className="listado-accesorios">
           {accesorios.map((accesorios) => (
             <div key={accesorios.id} className="cel-acc">
-              <img src={`${accesorios.imagen}`} alt="card-img" />
+              <div className="productImage">
+                <img className="ImgMovimiento" src={`${accesorios.imagen}`} alt="card-img" />
+              </div>
               <div className="acc-subcont">
-                {/*  <div className="cel-info">
-                  <span>
-                    <h2>Marca:</h2>
-                    <p>{accesorios.marca}</p>
-                  </span>
-                  <span>
-                    <h2>Referencia:</h2>
-                    <p>{accesorios.referencia}</p>
-                  </span>
-                  <span>
-                    <h2>Precio:</h2>
-                    <p>{accesorios.precio}</p>
-                  </span>
-                  <span>
-                    <h2>Caracteristicas:</h2>
-                    <p>{accesorios.caracteristicas}</p>
-                  </span>
-                </div> */}
-
-                {/* OTRA FORMA DE MOSTRAR LAS CARDS */}
-
                 <div className="wrapper">
                   <div className="overviewInfo">
                     <div className="actions">
@@ -153,8 +118,10 @@ const Accesorios_index = () => {
                   </div>
 
                   <div className="productSpecifications">
-                    <h1 className="TitleCard">CARACTERISTICAS</h1>
-                    <p>{accesorios.caracteristicas}</p>
+                    <h1 className="TitleCard">Caracteristicas</h1>
+                    <p className="scroll-caracteristicas">
+                      {accesorios.caracteristicas}
+                    </p>
 
                     <div className="productFeatures">
                       <div className="feature">
@@ -201,23 +168,14 @@ const Accesorios_index = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Boton acciones */}
-                {/*    <div className="acciones">
-                  <button onClick={() => confirEliminar(accesorios.id)}>
-                    <i className="fa-solid fa-trash"></i>
-                  </button>
-
-                  <Link
-                    to={`/edit-acc/${accesorios.id}`}
-                    className="fa-solid fa-pen-to-square"
-                  ></Link>
-                </div> */}
               </div>
             </div>
           ))}
         </section>
       </section>
+      <Link to="/add-acc " className="add-acc add-cel ml-40 bg-red-600">
+        <i className="fa-solid fa-plus"></i> <h1>Agregar nuevo accesorio</h1>
+      </Link>
     </section>
   );
 };

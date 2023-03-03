@@ -254,6 +254,14 @@ Degradado de la parte donde esta Marca... Etc */
 
 /* -----------------------ZONA FORMULARIO AGREGAR----------------- */
 
+.add-acc {
+  transform: translateX(245px) !important;
+}
+
+.add-acc:hover {
+  transform: translateX(20px) !important;
+}
+
 .formCell {
   border-radius: 30px;
   background: #212121;
