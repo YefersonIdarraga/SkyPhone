@@ -9,10 +9,10 @@ const Footer = () => {
             LOGO Y PRIMER TEXTO */}
 
         <div className="footer-item p-[5%]">
-          <a href="">
-            <img className="w-[15%] md:ml-40 " src={logo} alt="Logo Footer" />{" "}
+          <a href="/">
+            <img className="w-[15%] md:ml-10 " src={logo} alt="Logo Footer" />{" "}
           </a>
-          <div className="p-2 md:ml-[20%] ">
+          <div className="p-2 md:ml-120%] ">
             {" "}
             <p>
               Tienda en línea que ofrece una amplia
@@ -80,7 +80,7 @@ const Footer = () => {
               {" "}
               <img
                 src="https://i.blogs.es/bc08e5/html5_logo_256/1366_2000.png"
-                className="w-12 h-12 object-cover rounded-full ring-2 ring-sky-700 bg-white"
+                className="imgMove xl:w-12 xl:h-12 w-20 h-15 object-cover rounded-full ring-2 ring-sky-700 bg-white "
               />
             </li>
 
@@ -88,35 +88,35 @@ const Footer = () => {
               {" "}
               <img
                 src="https://blastcoding.com/wp-content/uploads/2018/10/CSS3.png"
-                className="w-12 h-12 object-cover rounded-full ring-2 ring-sky-700 bg-white"
+                className="imgMove xl:w-12 xl:h-12 w-20 h-15 object-cover rounded-full ring-2 ring-sky-700 bg-white"
               />
             </li>
             <li>
               {" "}
               <img
                 src="https://midu.dev/images/tags/firebase.png"
-                className="w-12 h-12 object-cover rounded-full ring-2 ring-sky-700 bg-white"
+                className="imgMove xl:w-12 xl:h-12 w-20 h-15 object-cover rounded-full ring-2 ring-sky-700 bg-white "
               />
             </li>
             <li>
               {" "}
               <img
                 src="https://webmention.io/avatar/pbs.twimg.com/c4bff765d9dfb3d8c6163b1de3a8e1a78cf0f9399b5a79c35695a49813821c44.jpg"
-                className="w-12 h-12 object-cover rounded-full ring-2 ring-sky-700 bg-white"
+                className="imgMove xl:w-12 xl:h-12 w-20 h-15 object-cover  rounded-full ring-2 ring-sky-700 bg-white "
               />
             </li>
             <li>
               {" "}
               <img
                 src="https://embed.zenn.studio/api/optimize-og-image/7706b747bf64e3a55303/https%3A%2F%2Fbradlc.gallerycdn.vsassets.io%2Fextensions%2Fbradlc%2Fvscode-tailwindcss%2F0.9.7%2F1674840236622%2FMicrosoft.VisualStudio.Services.Icons.Default "
-                className="w-12 h-12 object-cover rounded-full ring-2 ring-sky-700 bg-white"
+                className="imgMove xl:w-12 xl:h-12 w-20 h-15 object-cover rounded-full ring-2 ring-sky-700 bg-white "
               />
             </li>
             <li>
               {" "}
               <img
                 src="https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png"
-                className="w-12 h-12 object-cover rounded-full ring-2 ring-sky-700 bg-white"
+                className="imgMove xl:w-12 xl:h-12 w-20 h-15 object-cover rounded-full ring-2 ring-sky-700 bg-white "
               />
             </li>
           </ul>
@@ -125,10 +125,11 @@ const Footer = () => {
         {/* 
             ULTIMO TEXTO */}
 
-        <p className="font-medium text-center text-xl text-cyan-400">
+        <div className="font-medium text-center text-xl text-cyan-400  ">
           ALIANZA EMPRESARIAL CESDE. 2O23 Todos los Derechos Reservados. Final
           Metodologias Agiles.
-        </p>
+        </div>
+        <br />
       </div>
     </section>
   );

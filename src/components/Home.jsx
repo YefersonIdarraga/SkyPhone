@@ -5,19 +5,19 @@ import FormLogin from "./login/FormLogin";
 
 const Home = () => {
   return (
-    <section className="container mx-auto ">
-      <div className="divFondo md:h-[140%] h-[170%]"></div>
+    <section className="container m-auto">
+      <div className="divFondo xl:h-[140%] h-[80rem]"></div>
       <Header />
 
-      <div className="main mt-[8%] ml-[3%] w-auto md:w-[30%] mb-0 ">
+      <div className="main mt-[8%] xl:ml-[2%]  w-auto xl:w-[30%] mb-0 ">
         <p className="font-bold p-2 ">
           ✦⭑ El mejor contenido para tu smartphone.
         </p>
       </div>
-      <section className="container h-[90vh] grid grid-cols-1 md:grid-cols-8 -mt-[2%] md:m-5">
+      <section className="container h-[90vh] grid grid-cols-1 md:grid-cols-8 -mt-[2%] md:m-2 ">
         <section className="md:col-span-5 flex items-center justify-center ">
-          <div className="">
-            <h1 className="md:text-6xl text-5xl text-white m-5 md:-mt-[15%] mt-[10%] ">
+          <div>
+            <h1 className="md:text-6xl text-5xl text-white m-5 xl:-mt-[1%] md:mt-[10%] mt-[10%] ">
               Encuentra tu mejor estilo
               <br /> para tu smartphone.
             </h1>
@@ -43,21 +43,24 @@ const Home = () => {
           </div>
         </section>
         <section className="md:col-span-3">
-          <img className="pt-5 " src={logo} alt="" />
+          <img className="pt-2 " src={logo} alt="" />
         </section>
-        <div className="md:-mt-[55%] -mt-[2%] md:ml-[160%] ml-0 xl:w-[150%]">
+        <div className="xl:-mt-[35%] -mt-[2%] xl:ml-[160%] ml-0 xl:w-[150%] md:w-[350%] md:ml-[55%] md:pt-10">
           <a
             target="_blank"
             href="https://github.com/jaimezzapata/final-metodologias"
           >
-            <button className="BtnImg p-5  w-full    ">Contáctanos</button>
+            <button className="BtnImg p-5  w-full">Contáctanos</button>
           </a>
         </div>
         {/* ///FORMULARIO  */}
       </section>
-      <div className="container-formSesion">
-        <div className="formDetras  md:ml-[28.4%]  md:mt-[13%]  "></div>
-        <div className="formHome md:-mt-[31%] mt-[150%]">
+      <div className="container-formSesion ">
+        <div
+          className="formDetras m-auto xl:-mt-[3%]
+        mt-[190%] md:mt-[30%]  "
+        ></div>
+        <div className="formHome xl:-mt-[30%] md:-mt-[45%] -mt-[3%]">
           {" "}
           <FormLogin />{" "}
         </div>
