@@ -99,6 +99,7 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: space-evenly;
   align-items: center;
   background: #309eff00;
+  margin-right: -30px;
 }
 .logo {
   width: 70px;

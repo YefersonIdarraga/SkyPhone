@@ -125,11 +125,13 @@ const Footer = () => {
         {/* 
             ULTIMO TEXTO */}
 
-        <div className="font-medium text-center text-xl text-cyan-400  ">
-          ALIANZA EMPRESARIAL CESDE. 2O23 Todos los Derechos Reservados. Final
-          Metodologias Agiles.
+        <div className="p-2 -mt-5 m-auto">
+          <p className=" font-medium text-center text-xl text-cyan-400 ">
+            {" "}
+            ALIANZA EMPRESARIAL CESDE. 2O23 Todos los Derechos Reservados. Final
+            Metodologias Agiles.{" "}
+          </p>
         </div>
-        <br />
       </div>
     </section>
   );

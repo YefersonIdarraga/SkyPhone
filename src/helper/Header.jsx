@@ -20,8 +20,8 @@ const Header = () => {
   }, []);
 
   return (
-    <section className="container-header">
-      <div className="logo mt-5 -ml-[10%]">
+    <section className="container-header ">
+      <div className="logo mt-5 -ml-[5%]">
         <Link to="/">
           <img
             className="xl:-ml-[150%] md:-ml-[20%] -ml-[95%] "

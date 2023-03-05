@@ -159,9 +159,9 @@ const AgregarCel = () => {
       <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] m-auto p-5 text-center text-stone-300 uppercase">
         Agregar Celulares
       </h1>
-      <section className=" celulares-container md:mx-0 mx-10 ">
-        <section className="formCell p-5  ">
-          <form id="form" className="w-full max-w-2xl  m-10 " onSubmit={store}>
+      <section className=" celulares-container md:mx-0 mx-10 -mt-10 ">
+        <section className="formCell p-2 -ml-[55%]  ">
+          <form id="form" className="w-full max-w-2xl  m-5 " onSubmit={store}>
             <div className="contenedorForm ">
               <label className="text-gray-300 block uppercase font-bold mb-2 ">
                 Marca:

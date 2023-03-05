@@ -6,10 +6,10 @@ import FormLogin from "./login/FormLogin";
 const Home = () => {
   return (
     <section className="container m-auto">
-      <div className="divFondo xl:h-[140%] h-[80rem]"></div>
+      <div className="divFondo xl:h-[150%] h-[80rem]"></div>
       <Header />
 
-      <div className="main mt-[8%] xl:ml-[2%]  w-auto xl:w-[30%] mb-0 ">
+      <div className="main mt-[6%] xl:ml-[1%]  w-auto xl:w-[40%] mb-0 ">
         <p className="font-bold p-2 ">
           ✦⭑ El mejor contenido para tu smartphone.
         </p>
@@ -17,11 +17,11 @@ const Home = () => {
       <section className="container h-[90vh] grid grid-cols-1 md:grid-cols-8 -mt-[2%] md:m-2 ">
         <section className="md:col-span-5 flex items-center justify-center ">
           <div>
-            <h1 className="md:text-6xl text-5xl text-white m-5 xl:-mt-[1%] md:mt-[10%] mt-[10%] ">
+            <h1 className="md:text-6xl text-5xl text-white xl:-mt-[10%] md:mt-[10%] mt-[10%] m-auto ">
               Encuentra tu mejor estilo
               <br /> para tu smartphone.
             </h1>
-            <p className="text-gray-400 md:text-s text-ms m-auto p-3">
+            <p className="text-gray-400 md:text-s text-ms m-auto p-1 xl:mt-[2%]">
               Somos una tienda en línea que ofrece una amplia variedad de
               dispositivos móviles de última generación, así como una gran
               selección de accesorios para personalizar y proteger tu
@@ -30,22 +30,14 @@ const Home = () => {
               móviles de última generación, desde teléfonos inteligentes hasta
               tabletas y wearables. Además, contamos con una gran variedad de
               accesorios, como fundas, protectores de pantalla, cargadores,
-              auriculares y mucho más, para que puedas personalizar y proteger
-              tu dispositivo. <br />
-              Somos una empresa comprometida con la calidad y contamos con un
-              equipo de expertos en tecnología que están disponibles para
-              ayudarte en cada paso del proceso de compra, brindando
-              asesoramiento y ofreciendo precios competitivos. La tienda se
-              enfoca principalmente en brindar una experiencia excepcional al
-              cliente, lo que les permite encontrar todo lo que necesitan para
-              mejorar y personalizar su experiencia móvil.
+              auriculares y mucho más.
             </p>
           </div>
         </section>
         <section className="md:col-span-3">
           <img className="pt-2 " src={logo} alt="" />
         </section>
-        <div className="xl:-mt-[35%] -mt-[2%] xl:ml-[160%] ml-0 xl:w-[150%] md:w-[350%] md:ml-[55%] md:pt-10">
+        <div className="xl:-mt-[85%] -mt-[2%] xl:ml-[160%] ml-0 xl:w-[150%] md:w-[350%] md:ml-[55%] md:pt-10">
           <a
             target="_blank"
             href="https://github.com/jaimezzapata/final-metodologias"
@@ -57,10 +49,10 @@ const Home = () => {
       </section>
       <div className="container-formSesion ">
         <div
-          className="formDetras m-auto xl:-mt-[3%]
+          className="formDetras m-auto xl:mt-[6%]
         mt-[190%] md:mt-[30%]  "
         ></div>
-        <div className="formHome xl:-mt-[30%] md:-mt-[45%] -mt-[3%]">
+        <div className="formHome xl:-mt-[32%] md:-mt-[45%] -mt-[83%]">
           {" "}
           <FormLogin />{" "}
         </div>
