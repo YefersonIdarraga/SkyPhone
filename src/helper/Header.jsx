@@ -20,10 +20,14 @@ const Header = () => {
   }, []);
 
   return (
-    <section className="container-header">
-      <div className="logo mt-5 -ml-[10%]">
+    <section className="container-header ">
+      <div className="logo mt-5 -ml-[5%]">
         <Link to="/">
-          <img className="xl:-ml-[150%] -ml-[80%] " src={logo} alt="" />
+          <img
+            className="xl:-ml-[150%] md:-ml-[20%] -ml-[95%] "
+            src={logo}
+            alt=""
+          />
         </Link>
       </div>
       <section>
@@ -42,7 +46,7 @@ const Header = () => {
               <NavLink to="/celulares">
                 <li>Celulares</li>
               </NavLink>
-              <NavLink className="sesion active" to="/login">
+              <NavLink className="sesion active pl-12" to="/login">
                 <li>Inicio sesión</li>
               </NavLink>
             </span>

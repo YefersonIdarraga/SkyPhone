@@ -176,9 +176,9 @@ const EditarCel = () => {
       <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] m-auto p-5 text-center text-stone-300 uppercase">
         Editar consulta de celulares
       </h1>
-      <section className="celulares-container md:mx-0 mx-10">
-        <section className="formCell p-5 ">
-          <form id="form" className="w-full max-w-2xl  m-10 " onSubmit={update}>
+      <section className="celulares-container md:mx-0 -ml-[11%] ">
+        <section className="formCell p-5-  ">
+          <form id="form" className="w-full max-w-2xl  m-5 " onSubmit={update}>
             <div className="contenedorForm">
               <label className="text-gray-300 block uppercase font-bold mb-2 ">
                 Marca:
@@ -290,7 +290,7 @@ const EditarCel = () => {
             </div>
             {/* boton actualizar */}
             <p id="submit-alert"></p>
-            <div className="cel-but">
+            <div className="cel-but ">
               <button type="submit" className="btnAgregar">
                 Actualizar
               </button>
