@@ -90,12 +90,4 @@ const App = () => {
   );
 };
 
-/* function Footer() {
-  return (
-    <>
-     
-    </>
-  );
-} */
-
 export default App;

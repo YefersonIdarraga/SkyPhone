@@ -58,7 +58,7 @@ const Celulares_index = () => {
         Celulares disponibles
       </h1>
 
-      <section className=" container mx-auto md:ml-60 -ml-10 celulares-container">
+      <section className=" container mx-auto md:ml-60 -ml-[22%] celulares-container">
         {/* Datos de la tabla */}
         <section className="listado-celulares ">
           {celulares.map((celular) => (
