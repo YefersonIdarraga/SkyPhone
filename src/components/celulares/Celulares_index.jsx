@@ -173,7 +173,7 @@ const Celulares_index = () => {
           ))}
         </section>
       </section>
-      <Link to="/add-cel " className="add-cel ml-40 bg-red-600">
+      <Link to="/add-cel" className="add-cel ml-40 bg-red-600">
         <i className="fa-solid fa-plus"></i> <h1>Agregar nuevo celular</h1>
       </Link>
     </section>
