@@ -20,18 +20,14 @@ const Header = () => {
   }, []);
 
   return (
-    <section className="container-header ">
-      <div className="logo mt-5 -ml-[5%]">
+    <section className="container__header ">
+      <div className="div__logo">
         <Link to="/">
-          <img
-            className="xl:-ml-[150%] md:-ml-[20%] -ml-[95%] "
-            src={logo}
-            alt=""
-          />
+          <img className="div__log__img" src={logo} alt="" />
         </Link>
       </div>
       <section>
-        <div className="">
+        <div className="div__navigation">
           <ul>
             <span className={`linkClass ${clicked ? "active" : ""}`}>
               <NavLink to="/">
@@ -46,7 +42,7 @@ const Header = () => {
               <NavLink to="/celulares">
                 <li>Celulares</li>
               </NavLink>
-              <NavLink className="sesion active pl-12" to="/login">
+              <NavLink className="navigation__sesion active" to="/login">
                 <li>Inicio sesión</li>
               </NavLink>
             </span>
