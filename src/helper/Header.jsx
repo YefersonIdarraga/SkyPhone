@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
-import logo from "../assets/logo1.png";
+import logo from "../assets/logo1.webp";
 import Burgers from "../components/hamburger/Burgers";
 
 const Header = () => {

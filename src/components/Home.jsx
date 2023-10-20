@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../helper/Header";
+import imgPhone from "../assets/imgPhone.webp";
 import FormLogin from "./login/FormLogin";
 
 const Home = () => {
@@ -36,7 +37,10 @@ const Home = () => {
               <button className="contact__contac">Contáctanos</button>
             </a>
           </div>
-          {/* ///FORMULARIO  */}
+          {/* ///IMG HOME  */}
+          <div className="div__img__home">
+            <img src={imgPhone} className="img" />
+          </div>
         </div>
       </div>
       {/* <div className="container-formSesion ">

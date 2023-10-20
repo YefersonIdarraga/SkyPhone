@@ -217,6 +217,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* End button contact home */
+.div__img__home {
+  margin-top: -45%;
+  margin-left: 50%;
+}
 
 /* DIV AZUL QUE ESTA DETRAS DEL FORMULARIO DE INICIO */
 
