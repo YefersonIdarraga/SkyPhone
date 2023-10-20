@@ -133,13 +133,15 @@ body::-webkit-scrollbar-thumb:hover {
 .div__navigation li {
   text-decoration: none;
   font-size: 14px !important;
+  padding: 5px 10px !important;
+  margin: 7px !important;
   color: var(--dark-blue-400);
-  border-radius: 15px;
+  border-radius: 10px;
 }
-.container__header li:hover {
-  background: var(--dark-blue-200);
-  color: var(--dark-blue-500);
-  transition: all 0.2s linear;
+
+.div__navigation li:hover {
+  color: var(--dark-blue-100);
+  border: 2px solid var(--dark-blue-100);
 }
 
 .logo {
@@ -151,10 +153,11 @@ body::-webkit-scrollbar-thumb:hover {
 
 .navigation__sesion li {
   color: var(--dark-blue-200) !important;
-  font-weight: 500;
+  background-color: var(--dark-blue-800);
 }
-.navigation__sesion:hover li {
+.navigation__sesion li:hover {
   color: var(--dark-blue-500) !important;
+  background-color: var(--dark-blue-100);
 }
 
 /*End Header*/

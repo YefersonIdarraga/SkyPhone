@@ -30,7 +30,7 @@ const Header = () => {
         <div className="div__navigation">
           <ul>
             <span className={`linkClass ${clicked ? "active" : ""}`}>
-              <NavLink to="/">
+              <NavLink to="/" className="active">
                 <li>Inicio</li>
               </NavLink>
               <NavLink to="/clientes">
