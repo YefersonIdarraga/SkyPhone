@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { LoginWithEmail } from './Main';
+import { useNavigate } from 'react-router-dom';
+
 
 const FormLogin = () => {
   const input = document.querySelectorAll("#form-login input");
@@ -10,10 +13,30 @@ const FormLogin = () => {
   const exclamationUser = document.getElementById("exclamationUser");
   const advLog = document.getElementById("adv-log");
 
-  const user = /^[a-zA-Z0-9-_]{3,32}$/;
+  const user = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   const pass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
-  const validacionLogin = (e) => {
+  const navigate = useNavigate();
+
+  const handleLogin = async () => {
+    if (user.test(username) && pass.test(password)) {
+       const response = await LoginWithEmail(username, password);
+       if (response.success) {
+          console.log("Usuario autenticado con el UID:", response.uid);
+          navigate('/home');
+       } else {
+          console.error("Error al iniciar sesión:", response.error);
+          // Aquí puedes mostrar una alerta o mensaje indicando el error al usuario.
+       }
+    } else {
+       console.log("Campos de entrada inválidos.");
+       // Puedes mostrar una alerta o mensaje para indicar esto al usuario.
+    }
+ };
+ 
+
+
+   const validacionLogin = (e) => {
     e.preventDefault();
     switch (e.target.name) {
       case "username":
@@ -116,7 +139,7 @@ const FormLogin = () => {
               </a>{" "}
             </p>
           </div>
-          <button className="login-but" onClick={validacionLogin}>
+          <button className="login-but" onClick={handleLogin}>
             Iniciar sesión
           </button>
         </form>
