@@ -121,7 +121,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .div__logo {
   width: 10%;
-  margin: 0 50px;
+  margin: 0 20px;
 }
 
 .div__navigation {
@@ -144,13 +144,6 @@ body::-webkit-scrollbar-thumb:hover {
   border: 2px solid var(--dark-blue-100);
 }
 
-.logo {
-  width: 70px;
-}
-.logo img {
-  width: 100%;
-}
-
 .navigation__sesion li {
   color: var(--dark-blue-200) !important;
   background-color: var(--dark-blue-800);
@@ -164,23 +157,21 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* estilos del "El mejor contenido " */
 
-.div__container__home {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.div__content {
+  margin: 10%;
 }
-
-.div__p {
-  margin: 10% 55% 2% 11%;
-  border-radius: 20px;
+.class__p__home {
+  margin: 0 53% 3% 0;
+  white-space: nowrap;
+  font-size: 14px;
   text-align: center;
+  border-radius: 20px;
   background-color: var(--dark-blue-900);
   color: var(--dark-blue-300);
+  padding: 5px;
 }
 
 .div__content__title {
-  padding: 20px 150px;
   color: var(--dark-blue-100);
 }
 
@@ -191,7 +182,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .div__content__title p {
   font-size: 14px;
-  margin: 20px 0;
+  margin: 20px 0 30px 0;
   max-width: 550px;
 }
 
@@ -202,7 +193,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: var(--dark-blue-500);
   font-weight: 800;
   padding: 10px 0;
-  margin-left: 30%;
+  margin-left: 10%;
   max-width: 250px;
   border-radius: 20px;
   color: var(--dark-blue-100);
@@ -216,127 +207,15 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* End button contact home */
+/* Style img */
 .div__img__home {
-  margin-top: -45%;
-  margin-left: 50%;
+  margin-top: -48%;
+  float: right;
 }
-
-/* Estilos del responsive nav */
-
-.linkClass {
-  position: absolute;
-  top: -700px;
-  right: 0;
-  left: -2000px;
-  padding: 30px;
-  margin: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  transition: all 0.3s ease;
+.img {
+  width: 600px;
 }
-
-.linkClass.active {
-  width: 100%;
-  display: block;
-  position: absolute;
-  top: 20%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 2;
-}
-
-.linkClass li {
-  display: block;
-}
-
-.Bgdiv {
-  top: -100;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 0;
-  transition: all 0.3s ease;
-}
-
-.Bgdiv.active {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 50vh;
-  background-color: var(--dark-blue-900);
-  z-index: 1;
-}
-
-@media (min-width: 768px) {
-  .burgerClass {
-    display: none;
-  }
-
-  .linkClass {
-    position: initial;
-  }
-
-  .linkClass li {
-    display: inline;
-  }
-}
-
-@media (max-width: 834px) {
-  .div__background {
-    min-height: 80vh;
-  }
-  .div__p {
-    margin: 13% 40% 2% 7%;
-    padding: 0px 5px;
-  }
-  .div__content__title {
-    padding: 10px 100px;
-  }
-  .container__header {
-    padding: 20px 20px;
-  }
-  .div__content__title h1,
-  .div__content__title p {
-    margin-left: -40px;
-    max-width: 550px;
-  }
-
-  .div__navigation li {
-    margin: 0 3px !important;
-  }
-  .linkClass {
-    padding: 5px;
-    margin: 10px;
-  }
-  .div__logo {
-    width: 15%;
-    margin: 0 10px 0 0;
-  }
-  .div__img__home {
-    margin-top: -45%;
-    margin-left: 40%;
-    width: auto;
-  }
-}
-
-@media (max-width: 1300px) {
-  .div__navigation li {
-    font-size: 18px;
-    margin: 30px;
-    color: var(--dark-blue-200);
-  }
-  .navigation__sesion li {
-    color: var(--dark-blue-200);
-    background-color: var(--dark-blue-950);
-  }
-  .navigation__sesion li:hover {
-    color: var(--dark-blue-600) !important;
-  }
-}
+/* End style img */
 
 /* 
               FOOTER                */
@@ -403,10 +282,196 @@ body::-webkit-scrollbar-thumb:hover {
   transition: all 0.2s linear;
 }
 
-@media screen and (max-width: 320px) {
-  .footer-section {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-left: 2rem;
+/* Style of responsive nav */
+
+.linkClass {
+  position: absolute;
+  top: -700px;
+  right: 0;
+  left: -2000px;
+  padding: 30px;
+  margin: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.linkClass.active {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+.linkClass li {
+  display: block;
+}
+
+.Bgdiv {
+  top: -100;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+.Bgdiv.active {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50vh;
+  background-color: var(--dark-blue-900);
+  z-index: 1;
+}
+
+/* End style of responsive nav */
+
+/* Responsive all */
+
+@media (min-width: 1000px) {
+  .burgerClass {
+    display: none;
+  }
+
+  .linkClass {
+    position: initial;
+  }
+
+  .linkClass li {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .burgerClass {
+    display: block;
+    max-width: 50vh;
+  }
+  .linkClass {
+    padding: 15rem 50px;
+    margin: 0 auto;
+  }
+  .linkClass li {
+    padding: 20px;
+  }
+  .div__logo {
+    margin-left: -40px;
+    width: 15%;
+  }
+  .img {
+    width: 400px;
+  }
+
+  .div__navigation li {
+    font-size: 18px;
+    color: var(--dark-blue-200);
+  }
+  .navigation__sesion li {
+    color: var(--dark-blue-200);
+    background-color: var(--dark-blue-950);
+  }
+  .navigation__sesion li:hover {
+    color: var(--dark-blue-600) !important;
+  }
+  .class__p__home {
+    margin: 15% 40% 2% -6%;
+  }
+  .div__contact {
+    margin-left: 2%;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .div__content__title {
+    padding: 20px 0;
+  }
+
+  .div__content__title h1,
+  .div__content__title p {
+    margin-left: -40px;
+  }
+
+  .div__content__title p {
+    max-width: 450px;
+    line-height: 1.65em;
+  }
+
+  .div__navigation li {
+    margin: 0 1px !important;
+  }
+  .linkClass {
+    padding: 5px;
+    margin: 10px;
+  }
+
+  .div__logo {
+    position: absolute;
+    margin-left: -60px;
+  }
+
+  .burgerClass {
+    min-width: 18vh;
+  }
+
+  .div__img__home {
+    margin-top: -53%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .div__background {
+    min-height: 100vh;
+  }
+  .Bgdiv.active {
+    padding: 50vh 0;
+  }
+
+  .burgerClass {
+    min-width: 7vh;
+  }
+  .linkClass {
+    padding: 10rem 0px;
+    margin: 0 0px;
+  }
+  .linkClass li {
+    padding: 10px 0;
+  }
+
+  .div__content {
+    padding: 0px;
+    margin: 0 50px;
+    margin-top: 15vh;
+  }
+  .div__logo {
+    margin-right: 22%;
+  }
+
+  .div__img__home {
+    display: none;
+  }
+
+  .div__content__title h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 27px;
+  }
+
+  .div__content__title p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .class__p__home {
+    font-size: 11px;
+    padding: 0px;
+    margin: 0;
   }
 }

@@ -6,15 +6,14 @@ import FormLogin from "./login/FormLogin";
 const Home = () => {
   return (
     <section>
-      <div className="div__background"></div>
       <Header />
+      <div className="div__background"></div>
+
       <div className="div__container__home">
-        <div className="div__p">
-          <p className="class__p__">
+        <div className="div__content ">
+          <p className="class__p__home">
             ✦⭑ El mejor contenido para tu smartphone.
           </p>
-        </div>
-        <div className="div__content ">
           <div className="div__content__title ">
             <h1 className="content__title">
               Encuentra tu mejor estilo
@@ -37,12 +36,13 @@ const Home = () => {
               <button className="contact__contac">Contáctanos</button>
             </a>
           </div>
-          {/* ///IMG HOME  */}
-          <div className="div__img__home">
-            <img src={imgPhone} className="img" />
-          </div>
+        </div>
+        {/* ///IMG HOME  */}
+        <div className="div__img__home">
+          <img src={imgPhone} className="img" />
         </div>
       </div>
+
       {/* <div className="container-formSesion ">
         <div
           className="formDetras m-auto xl:mt-[6%]
