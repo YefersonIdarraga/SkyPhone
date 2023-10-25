@@ -16,6 +16,8 @@ import EditarAcc from "../components/accesorios/EditarAcc";
 import AgregarClient from "../components/clientes/AgregarClient";
 import Footer from "../helper/Footer";
 
+import CommitList from "../components/GitHub/CommitList"
+
 const Routing = () => {
     return (
         <>
@@ -38,6 +40,8 @@ const Routing = () => {
                     <Route path="/clientes" element={<Clientes_index />} />
                     <Route path="/clientes/agregar" element={<PrivateRoute><AgregarClient /></PrivateRoute>} />
                     <Route path="/clientes/editar/:id" element={<PrivateRoute><EditarClient /></PrivateRoute>} />
+
+                    <Route path="/commits" element={<CommitList />} />
 
                     {/* Ruta para errores 404 (Debe ser siempre la última) */}
                     <Route path="*" element={<Error404 />} />
