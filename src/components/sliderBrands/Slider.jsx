@@ -1,10 +1,10 @@
 import React from "react";
-import imgIphone from "../sliderBrands/img/iPhone.webp";
-import imgMotorola from "../sliderBrands/img/motorola.webp";
-import imgNokia from "../sliderBrands/img/Nokia.webp";
-import imgOppo from "../sliderBrands/img/oppo.webp";
-import imgSamsung from "../sliderBrands/img/samsung.webp";
-import imgXiaomi from "../sliderBrands/img/Xiaomi.webp";
+import imgIphone from "../../assets/sliderImg/iPhone.webp";
+import imgMotorola from "../../assets/sliderImg/motorola.webp";
+import imgNokia from "../../assets/sliderImg/Nokia.webp";
+import imgOppo from "../../assets/sliderImg/oppo.webp";
+import imgSamsung from "../../assets/sliderImg/samsung.webp";
+import imgXiaomi from "../../assets/sliderImg/Xiaomi.webp";
 import "../sliderBrands/slider.css";
 export const Slider = () => {
   return (

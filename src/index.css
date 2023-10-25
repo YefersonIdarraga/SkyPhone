@@ -121,7 +121,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .div__logo {
   width: 10%;
-  margin: 0 20px;
+  margin: 0 50px;
 }
 
 .div__navigation {
@@ -161,7 +161,7 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 10%;
 }
 .class__p__home {
-  margin: 0 53% 3% 0;
+  margin: 0 63% 3% 0;
   white-space: nowrap;
   font-size: 14px;
   text-align: center;
