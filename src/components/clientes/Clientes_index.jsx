@@ -64,16 +64,16 @@ const Clientes_index = () => {
             <div key={cliente.id} className="cel-card">
               <div className="cel-subcont">
                 {/* OTRA FORMA DE MOSTRAR LAS CARDS */}
-                <div class="wrapper targeta_client">
+                <div className="wrapper targeta_client">
                   {" "}
                   {/*inicio targeta */}
-                  <div class="overviewInfo">
-                    <div class="productinfo">
+                  <div className="overviewInfo">
+                    <div className="productinfo">
                       <img src={icon_cliente} alt="" />
 
                       <div className="targeta_cont">
                         <div className="targeta_cont_items">
-                          <div class="grouptext">
+                          <div className="grouptext">
                             <h3>Cliente</h3>
                             <p>
                               {cliente.primer_nombre} {cliente.segundo_nombre}
@@ -83,7 +83,7 @@ const Clientes_index = () => {
                               {cliente.segundo_apellido}
                             </p>
                           </div>
-                          <div class="grouptext">
+                          <div className="grouptext">
                             <h3>Direccion</h3>
                             <p>{cliente.direccion}</p>
                           </div>
@@ -95,10 +95,10 @@ const Clientes_index = () => {
                       </div>
 
                       <div className="acciones_clie">
-                        <div class="checkoutButton ojo">
+                        <div className="checkoutButton ojo">
                           {" "}
                           {/* ↓ acciones ↓ */}
-                          <div class="priceTag">
+                          <div className="priceTag">
                             <span>
                               <button
                                 onClick={() => confirEliminar(cliente.id)}
@@ -110,7 +110,7 @@ const Clientes_index = () => {
                           <h2>Eliminar</h2>
                         </div>{" "}
                         {/* ↑ acciones ↑ */}
-                        <div class="checkoutButton ojo">
+                        <div className="checkoutButton ojo">
                           {" "}
                           {/* ↓ acciones ↓ */}
                           <div>
@@ -133,7 +133,7 @@ const Clientes_index = () => {
         </section>
       </section>
       <Link to="/add-client" className="add-cel ml-40 bg-red-600">
-        <i class="fa-solid fa-plus"></i>
+        <i className="fa-solid fa-plus"></i>
         <h1>Agregar nuevo cliente</h1>
       </Link>
 
@@ -150,7 +150,7 @@ const Clientes_index = () => {
           </thead>
           <tbody>
             {clientes.map((cliente) => (
-              <tr>
+              <tr key={cliente.id}>
                 <td data-label="Nombre:">
                   {cliente.primer_nombre} {cliente.segundo_nombre}{" "}
                   {cliente.primer_apellido} {cliente.segundo_apellido}

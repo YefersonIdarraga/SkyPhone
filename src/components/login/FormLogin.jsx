@@ -20,10 +20,12 @@ const FormLogin = () => {
 
   const handleLogin = async () => {
     if (user.test(username) && pass.test(password)) {
+      console.log("Intentando autenticar...");
        const response = await LoginWithEmail(username, password);
+       console.log("Respuesta recibida:", response);
        if (response.success) {
           console.log("Usuario autenticado con el UID:", response.uid);
-          navigate('/home');
+          navigate('/');
        } else {
           console.error("Error al iniciar sesión:", response.error);
           // Aquí puedes mostrar una alerta o mensaje indicando el error al usuario.
