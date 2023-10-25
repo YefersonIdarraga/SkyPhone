@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../helper/Header";
 import imgPhone from "../assets/imgPhone.webp";
-import FormLogin from "./login/FormLogin";
+import { Slider } from "./sliderBrands/Slider";
 
 const Home = () => {
   return (
@@ -42,6 +42,8 @@ const Home = () => {
           <img src={imgPhone} className="img" />
         </div>
       </div>
+
+      <Slider />
 
       {/* <div className="container-formSesion ">
         <div
