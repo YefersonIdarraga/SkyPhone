@@ -174,8 +174,8 @@ const AgregarCel = () => {
                 type="text"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-teal-300  focus:text-blue-700 focus:font-bold"
               />
-              <i id="check" class="fa-solid fa-check"></i>
-              <i id="exclamation" class="fa-solid fa-circle-exclamation"></i>
+              <i id="check" className="fa-solid fa-check"></i>
+              <i id="exclamation" className="fa-solid fa-circle-exclamation"></i>
               <div id="marca-alert" className="exclamation-alert">
                 <p>Solo se permiten letras.</p>
               </div>
@@ -193,8 +193,8 @@ const AgregarCel = () => {
                 type="text"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-teal-300  focus:text-blue-700 focus:font-bold"
               />
-              <i id="checkR" class="fa-solid fa-check"></i>
-              <i id="exclamationR" class="fa-solid fa-circle-exclamation"></i>
+              <i id="checkR" className="fa-solid fa-check"></i>
+              <i id="exclamationR" className="fa-solid fa-circle-exclamation"></i>
               <div id="referencia-alert" className="exclamation-alert">
                 <p>Solo se permiten letras y números.</p>
               </div>
@@ -212,8 +212,8 @@ const AgregarCel = () => {
                 type="number"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-teal-300  focus:text-blue-700 focus:font-bold"
               />
-              <i id="checkP" class="fa-solid fa-check"></i>
-              <i id="exclamationP" class="fa-solid fa-circle-exclamation"></i>
+              <i id="checkP" className="fa-solid fa-check"></i>
+              <i id="exclamationP" className="fa-solid fa-circle-exclamation"></i>
               <div id="precio-alert" className="exclamation-alert">
                 <p>Solo se permiten números.</p>
               </div>
