@@ -14,6 +14,8 @@ import EditarClient from "./components/clientes/EditarClient";
 import EditarAcc from "./components/accesorios/EditarAcc";
 import AgregarClient from "./components/clientes/AgregarClient";
 
+import CommitList from "./components/GitHub/CommitList";
+
 import Footer from "./helper/Footer";
 
 ///Creacion de rutas
@@ -77,6 +79,11 @@ const router = createBrowserRouter([
   {
     path: "/edit-acc/:id",
     element: <EditarAcc />,
+    errorElement: <Error404 />,
+  },
+  {
+    path: "/commitlist",
+    element: <CommitList />,
     errorElement: <Error404 />,
   },
   // ↑ accesorios   ↑     ↑
