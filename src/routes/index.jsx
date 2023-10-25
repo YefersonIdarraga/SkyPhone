@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from '../Contexts/Main';
 import PrivateRoute from '../PrivateRoute/Main';
+import Header from '../helper/Header'
 import Home from "../components/Home";
 import Error404 from "../helper/Error404";
 import Accesorios_index from "../components/accesorios/Accesorios_index";
@@ -22,6 +23,7 @@ const Routing = () => {
     return (
         <>
             <AuthProvider>
+                <Header/>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login_index />} />
@@ -41,7 +43,7 @@ const Routing = () => {
                     <Route path="/clientes/agregar" element={<PrivateRoute><AgregarClient /></PrivateRoute>} />
                     <Route path="/clientes/editar/:id" element={<PrivateRoute><EditarClient /></PrivateRoute>} />
 
-                    <Route path="/commits" element={<CommitList />} />
+                    <Route path="/CommitList" element={<CommitList />} />
 
                     {/* Ruta para errores 404 (Debe ser siempre la última) */}
                     <Route path="*" element={<Error404 />} />

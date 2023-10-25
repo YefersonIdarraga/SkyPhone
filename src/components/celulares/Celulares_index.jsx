@@ -4,7 +4,6 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { collection, doc, getDocs, deleteDoc } from "firebase/firestore";
 import { dataBase } from "../../firebase/dataBase";
-import Header from "../../helper/Header";
 ///Componentes de alerta
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
@@ -52,7 +51,6 @@ const Celulares_index = () => {
 
   return (
     <section className=" contenedor-principal">
-      <Header />
       <div className="divFondo md:h-[140%] h-[130%]"></div>
       <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] p-5 mt-10 text-center text-stone-300 uppercase -mb-20">
         Celulares disponibles
