@@ -1,12 +1,10 @@
 import React from "react";
-import Header from "../helper/Header";
 import imgPhone from "../assets/imgPhone.webp";
 import { Slider } from "./sliderBrands/Slider";
 
 const Home = () => {
   return (
     <section>
-      <Header />
       <div className="div__background"></div>
 
       <div className="div__container__home">

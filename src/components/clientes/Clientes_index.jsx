@@ -5,7 +5,6 @@ import { dataBase } from "../../firebase/dataBase";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import "./clientess.css";
-import Header from "../../helper/Header";
 import icon_cliente from "../../assets/icon_cliente.png";
 /* import icon_cliente from "../../assets/icon_cliente.png"; */
 
@@ -55,7 +54,6 @@ const Clientes_index = () => {
 
   return (
     <section>
-      <Header />
       <div className="divFondo md:h-[140%] h-[130%]"></div>
       <section className="celulares-container md:mx-0 mx-10">
         {/* Datos de la tabla */}

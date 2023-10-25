@@ -7,7 +7,6 @@ import { dataBase } from "../../firebase/dataBase";
 ///Componentes de alerta
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import Header from "../../helper/Header";
 
 const MySwal = withReactContent(Swal);
 
@@ -53,7 +52,6 @@ const Accesorios_index = () => {
   return (
     <section className="contenedor-principal">
       <div className="divFondo md:h-[140%] h-[130%]"></div>
-      <Header />
       <section className="accesorios-container">
         {/* Datos de la tabla */}
         <section className="listado-accesorios">
