@@ -209,7 +209,7 @@ body::-webkit-scrollbar-thumb:hover {
 /* End button contact home */
 /* Style img */
 .div__img__home {
-  margin-top: -48%;
+  margin-top: -45%;
   float: right;
 }
 .img {
@@ -382,7 +382,7 @@ body::-webkit-scrollbar-thumb:hover {
     color: var(--dark-blue-600) !important;
   }
   .class__p__home {
-    margin: 15% 40% 2% -6%;
+    margin: 15% 40% 2% 0;
   }
   .div__contact {
     margin-left: 2%;
@@ -390,6 +390,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media screen and (max-width: 868px) {
+  .div__background {
+    min-height: 75vh;
+  }
   .div__content__title {
     padding: 20px 0;
   }
@@ -404,12 +407,8 @@ body::-webkit-scrollbar-thumb:hover {
     line-height: 1.65em;
   }
 
-  .div__navigation li {
-    margin: 0 1px !important;
-  }
-  .linkClass {
-    padding: 5px;
-    margin: 10px;
+  .class__p__home {
+    margin: 0 35% 2% -5%;
   }
 
   .div__logo {
@@ -418,7 +417,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .burgerClass {
-    min-width: 18vh;
+    min-width: 17vh;
   }
 
   .div__img__home {
