@@ -1,5 +1,5 @@
 const BASE_URL = 'https://api.github.com';
-const token = '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'; // Reemplaza con tu token real
+const token = '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'; // Reemplaza con tu token real
 
 export async function getCommits(owner, repo) {
   const url = `${BASE_URL}/repos/${owner}/${repo}/commits`;

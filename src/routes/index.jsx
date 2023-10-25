@@ -41,7 +41,7 @@ const Routing = () => {
                     <Route path="/clientes/agregar" element={<PrivateRoute><AgregarClient /></PrivateRoute>} />
                     <Route path="/clientes/editar/:id" element={<PrivateRoute><EditarClient /></PrivateRoute>} />
 
-                    <Route path="/commits" element={<CommitList />} />
+                    <Route path="/CommitList" element={<CommitList />} />
 
                     {/* Ruta para errores 404 (Debe ser siempre la última) */}
                     <Route path="*" element={<Error404 />} />
