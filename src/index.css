@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,400&display=swap");
 
 /* It is added tailwind */
 
@@ -12,7 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Roboto", sans-serif;
 
   --dark-blue-50: #e8f1ff;
   --dark-blue-100: #d4e5ff;
@@ -120,8 +120,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .div__logo {
-  width: 10%;
-  margin: 0 50px;
+  max-width: 150px;
 }
 
 .div__navigation {
@@ -131,7 +130,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .div__navigation li {
+  font-weight: 700;
   text-decoration: none;
+  letter-spacing: 1px;
   font-size: 14px;
   padding: 5px 10px;
   margin: 7px;
@@ -150,7 +151,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: var(--dark-blue-800);
 }
 .navigation__sesion li:hover {
-  color: var(--dark-blue-500) !important;
+  color: var(--dark-blue-800) !important;
   background-color: var(--dark-blue-100);
 }
 
@@ -162,8 +163,9 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 10%;
 }
 .class__p__home {
-  margin: 0 63% 3% 0;
-  white-space: nowrap;
+  margin: 0;
+  max-width: 450px;
+  box-sizing: border-box;
   font-size: 14px;
   text-align: center;
   border-radius: 20px;
@@ -177,14 +179,18 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .div__content__title h1 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 900;
+  margin-top: 20px;
+  letter-spacing: 1px;
 }
 
 .div__content__title p {
   font-size: 14px;
   margin: 20px 0 30px 0;
   max-width: 550px;
+
+  line-height: 2em;
 }
 
 /* Button contact home */
@@ -202,7 +208,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .div__contact:hover {
-  background-color: var(--dark-blue-300);
+  background-color: var(--dark-blue-100);
   color: var(--dark-blue-500);
   transition: all 0.3s linear;
 }
@@ -211,10 +217,10 @@ body::-webkit-scrollbar-thumb:hover {
 /* Style img */
 .div__img__home {
   margin-top: -45%;
-  float: right;
 }
 .img {
-  width: 600px;
+  max-width: 40%;
+  float: right;
 }
 /* End style img */
 
@@ -232,7 +238,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .footer-section h2 {
+  color: var(--dark-blue-100);
   margin-bottom: 1rem;
+  font-family: "Martian Mono", monospace;
   position: relative;
 }
 
@@ -244,11 +252,6 @@ body::-webkit-scrollbar-thumb:hover {
   position: absolute;
   top: 1.7rem;
   left: 0;
-}
-
-.footer-section p {
-  transition: all 0.2s linear;
-  margin-bottom: 0.6em;
 }
 
 .pMove:hover {
@@ -328,9 +331,9 @@ body::-webkit-scrollbar-thumb:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 50vh;
+  padding: 50vh 0;
   background-color: var(--dark-blue-900);
-  z-index: 1;
+  z-index: 0;
 }
 
 /* End style of responsive nav */
@@ -355,7 +358,10 @@ body::-webkit-scrollbar-thumb:hover {
   .burgerClass {
     display: block;
     max-width: 50vh;
+    top: 20px;
+    z-index: 2;
   }
+
   .linkClass {
     padding: 15rem 50px;
     margin: 0 auto;
@@ -365,10 +371,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .div__logo {
     margin-left: -40px;
-    width: 15%;
-  }
-  .img {
-    width: 400px;
+    max-width: 130px;
   }
 
   .div__navigation li {
@@ -382,9 +385,7 @@ body::-webkit-scrollbar-thumb:hover {
   .navigation__sesion li:hover {
     color: var(--dark-blue-600) !important;
   }
-  .class__p__home {
-    margin: 15% 40% 2% 0;
-  }
+
   .div__contact {
     margin-left: 2%;
   }
@@ -392,8 +393,9 @@ body::-webkit-scrollbar-thumb:hover {
 
 @media screen and (max-width: 868px) {
   .div__background {
-    min-height: 75vh;
+    max-width: auto;
   }
+
   .div__content__title {
     padding: 20px 0;
   }
@@ -409,16 +411,12 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .class__p__home {
-    margin: 0 35% 2% -5%;
+    margin-left: -40px;
+    margin-top: 100px;
   }
 
   .div__logo {
-    position: absolute;
     margin-left: -60px;
-  }
-
-  .burgerClass {
-    min-width: 17vh;
   }
 
   .div__img__home {
@@ -427,16 +425,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media screen and (max-width: 600px) {
-  .div__background {
-    min-height: 100vh;
-  }
   .Bgdiv.active {
     padding: 50vh 0;
   }
 
-  .burgerClass {
-    min-width: 7vh;
-  }
   .linkClass {
     padding: 10rem 0px;
     margin: 0 0px;
@@ -450,9 +442,6 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 0 50px;
     margin-top: 15vh;
   }
-  .div__logo {
-    margin-right: 22%;
-  }
 
   .div__img__home {
     display: none;
@@ -461,7 +450,9 @@ body::-webkit-scrollbar-thumb:hover {
   .div__content__title h1 {
     margin: 0;
     padding: 0;
-    font-size: 27px;
+    font-size: 35px;
+    line-height: 1.3em;
+    margin-bottom: 20px;
   }
 
   .div__content__title p {
@@ -471,7 +462,7 @@ body::-webkit-scrollbar-thumb:hover {
 
   .class__p__home {
     font-size: 11px;
-    padding: 0px;
+    max-width: 350px;
     margin: 0;
   }
 }
