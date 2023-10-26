@@ -137,6 +137,7 @@ body::-webkit-scrollbar-thumb:hover {
   margin: 7px;
   color: var(--dark-blue-400);
   border-radius: 10px;
+  border: 2px solid #00000000;
 }
 
 .div__navigation li:hover {

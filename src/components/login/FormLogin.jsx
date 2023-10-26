@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { LoginWithEmail } from './Main';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const FormLogin = () => {
@@ -44,26 +44,38 @@ const FormLogin = () => {
       case "username":
         if (user.test(e.target.value)) {
           checkUser.style.opacity = "1";
-          exclamationUser.style.opacity = "0";
+          exclamationUser.style.display = "none";
           userA.style.opacity = "0";
           advLog.style.opacity = "0";
         } else {
           checkUser.style.opacity = "0";
-          exclamationUser.style.opacity = "1";
-          userA.style.opacity = "1";
+          exclamationUser.style.display = "block";
+          exclamationUser.style.opacity = "1"
+          exclamationUser.addEventListener("mouseover", () => {
+            userA.style.opacity = "1";
+          })
+          exclamationUser.addEventListener("mouseout", () => {
+            userA.style.opacity = "0";
+          })
           advLog.style.opacity = "1";
         }
         break;
       case "password":
         if (pass.test(e.target.value)) {
           checkPass.style.opacity = "1";
-          exclamationPass.style.opacity = "0";
+          exclamationPass.style.display = "none";
           passA.style.opacity = "0";
           advLog.style.opacity = "0";
         } else {
           checkPass.style.opacity = "0";
+          exclamationPass.style.display = "block";
           exclamationPass.style.opacity = "1";
-          passA.style.opacity = "1";
+          exclamationPass.addEventListener("mouseover", () => {
+            passA.style.opacity = "1";
+          })
+          exclamationPass.addEventListener("mouseout", () => {
+            passA.style.opacity = "0";
+          })
           advLog.style.opacity = "1";
         }
         break;
@@ -77,6 +89,7 @@ const FormLogin = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false)
 
   return (
     <section className="contenedor-principal">
@@ -113,11 +126,25 @@ const FormLogin = () => {
             <input
               name="password"
               id="password"
-              type="password"
+              type={passwordVisible ? 'text' : 'password'}
               placeholder="Contraseña"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            <button
+              className="password-visible"
+              onClick={(e) => {
+                e.preventDefault();
+                setPasswordVisible(!passwordVisible);
+              }}
+              title={
+                passwordVisible ? "Ocultar contraseña" : "Mostrar contraseña"
+              }
+            >
+              <i
+                class={`fa-regular fa-eye${passwordVisible ? "" : "-slash"}`}
+              ></i>
+            </button>
             <i id="checkPass" className="fa-solid fa-check"></i>
             <i
               id="exclamationPass"
@@ -136,9 +163,9 @@ const FormLogin = () => {
           <div className="form-section">
             <p className="Nocuenta ">
               No tienes una cuenta?{" "}
-              <a className="TextLog uppercase" href="">
+              <Link className="TextLog uppercase" to="/registro">
                 Registrate
-              </a>{" "}
+              </Link>{" "}
             </p>
           </div>
           <button className="login-but" onClick={handleLogin}>

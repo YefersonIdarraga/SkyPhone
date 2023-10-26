@@ -5,9 +5,9 @@ function CommitList() {
   const [commits, setCommits] = useState([]);
 
   useEffect(() => {
-    const owner = 'santiago2208'; // Reemplaza con el nombre del propietario del repositorio
-    const repo = 'final-metodologias-santiago'; // Reemplaza con el nombre del repositorio
-    const token = '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'; // Reemplaza con tu token de acceso personal real
+    const owner = 'YefersonIdarraga'; // Reemplaza con el nombre del propietario del repositorio
+    const repo = 'SkyPhone'; // Reemplaza con el nombre del repositorio
+    const token = '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'; // Reemplaza con tu token de acceso personal real
 
     getCommits(owner, repo, token)
       .then((data) => {

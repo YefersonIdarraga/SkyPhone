@@ -16,6 +16,7 @@ import EditarClient from "../components/clientes/EditarClient";
 import EditarAcc from "../components/accesorios/EditarAcc";
 import AgregarClient from "../components/clientes/AgregarClient";
 import Footer from "../helper/Footer";
+import Register_index from '../components/register/Register_index';
 
 import CommitList from "../components/GitHub/CommitList"
 
@@ -27,6 +28,7 @@ const Routing = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login_index />} />
+                    <Route path="/registro" element={<Register_index />} />
 
                     {/* Rutas para celulares */}
                     <Route path="/celulares" element={<Celulares_index />} />
